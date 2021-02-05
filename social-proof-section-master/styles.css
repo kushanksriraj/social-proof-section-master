@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Spartan', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.img-top {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40%;
+    height: 50%;
+}
+
+.img-bottom {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 75%;
+    height: 85%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.upper-half {
+    display: flex;
+    justify-content: space-between;
+}
+
+.text {
+    width: 380px;
+    height: 200px;
+}
+
+.text .text-big {
+    width: 300px;
+    color: hsl(300, 43%, 22%);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.text .text-small {
+    padding: 1rem;
+    padding-left: 0;
+    color: hsl(303, 10%, 53%);
+    font-size: 0.7rem;
+    line-height: 1.1rem;
+    font-weight: 500;
+}
+
+.ratings {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 2rem;
+}
+
+.rating-card {
+    height: 42px;
+    width: 340px;
+    background-color: hsl(300, 24%, 96%);
+    border-radius: 4px;
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.nudge-right {
+    position: relative;
+    left: 40px;
+}
+
+.nudge-right-more {
+    position: relative;
+    left: 80px;
+}
+
+.stars {
+    width: 80px;
+    height: 15px;
+    margin: 11px 0 8px 20px;
+}
+
+.stars img {
+    width: 10px;
+    height: 10px;
+    margin-right: 2px;
+}
+
+.rating-text {
+    font-size: 0.62rem;
+    font-weight: bold;
+    color: hsl(300, 43%, 22%);
+    height: 34px;
+    text-align: center;
+    padding-top: 16px;
+    padding-left: 15px;
+}
+
+.lower-half {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.cards {
+    width: 280px;
+    height: 190px;
+    background-color: hsl(300, 43%, 22%);
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 1.6rem;
+}
+
+.nudge-down {
+    position: relative;
+    top: 20px;
+}
+
+.nudge-down-more {
+    position: relative;
+    top: 40px;
+}
+
+.name-img {
+    display: flex;
+    margin: 30px 0 0 25px;
+}
+
+.pic img {
+    display: block;
+    border-radius: 100px;
+    width: 35px;
+    height: 35px;
+}
+
+.name {
+    color: hsl(300, 24%, 96%);
+    font-weight: bold;
+    font-size: 0.7rem;
+    margin-left: 18px;
+    margin-top: 5px;
+}
+
+.verified-status {
+    margin-top: 0.3rem;
+    font-weight: normal;
+    color: hsl(333, 80%, 67%);
+    font-size: 0.7rem;
+}
+
+.review-text {
+    padding: 1.3rem;
+    padding-top: 0rem;
+    font-size: 0.65rem;
+    color: hsl(300, 24%, 96%);
+    line-height: 1.1rem;
+    font-weight: 500;
+    padding-bottom: 2rem;
+}
