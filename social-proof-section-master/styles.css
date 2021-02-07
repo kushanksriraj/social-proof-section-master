@@ -7,170 +7,288 @@
     font-family: 'Spartan', sans-serif;
 }
 
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+
+/* mobile support  */
+
+@media only screen and (max-width : 480px) {
+
+    body {
+        background: url(./images/bg-pattern-top-mobile.svg) top left,
+            url(./images/bg-pattern-bottom-mobile.svg) bottom right;
+
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    main {
+        margin: 1rem;
+    }
+
+    .upper-half {
+        padding: 1rem;
+    }
+
+    .text {
+        /* margin: 1rem; */
+        margin-top: 2.5rem;
+        text-align: center;
+    }
+
+    .text-big {
+        color: hsl(300, 43%, 22%);
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    .text-small {
+        color: hsl(303, 10%, 53%);
+        margin: 1rem 0;
+        font-size: 0.95rem;
+        line-height: 1.2rem;
+        font-weight: 500;
+        margin-bottom: 2rem;
+    }
+
+    .ratings {}
+
+    .rating-card {
+        height: 65px;
+        background-color: hsl(300, 24%, 96%);
+        border-radius: 4px;
+        margin-bottom: 1rem;
+    }
+
+    .stars {
+        width: 100px;
+        margin: auto;
+        padding-top: 0.8rem;
+        padding-bottom: 0.5rem;
+    }
+
+    .stars img {
+        width: 14px;
+        height: 14px;
+        margin-right: 2px;
+    }
+
+    .rating-text {
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: hsl(300, 43%, 22%);
+        text-align: center;
+    }
+
+    .lower-half {
+        padding: 1rem;
+    }
+
+
+    .cards {
+        height: 230px;
+        background-color: hsl(300, 43%, 22%);
+        border-radius: 7px;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+    }
+
+    .name-img {
+        display: flex;
+        margin: 30px 0 0 25px;
+    }
+
+    .pic img {
+        display: block;
+        border-radius: 100px;
+        width: 35px;
+        height: 35px;
+    }
+
+    .name {
+        color: hsl(300, 24%, 96%);
+        font-weight: bold;
+        font-size: 0.7rem;
+        margin-left: 18px;
+        margin-top: 5px;
+    }
+
+    .verified-status {
+        margin-top: 0.3rem;
+        font-weight: normal;
+        color: hsl(333, 80%, 67%);
+        font-size: 0.7rem;
+    }
+
+    .review-text {
+        margin-top: 2rem;
+        padding: 1.5rem;
+        padding-top: 0rem;
+        font-size: 0.75rem;
+        color: hsl(300, 24%, 96%);
+        line-height: 1.3rem;
+        font-weight: 500;
+        padding-bottom: 2rem;
+    }
+
 }
 
-.img-top {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 40%;
-    height: 50%;
-}
 
-.img-bottom {
-    display: block;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 75%;
-    height: 85%;
-}
+/* desktop */
 
-main {
-    display: flex;
-    flex-direction: column;
-}
+@media only screen and (min-width : 481px) {
 
-.upper-half {
-    display: flex;
-    justify-content: space-between;
-}
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    
+        background: url(./images/bg-pattern-top-desktop.svg) left top,
+            url(./images/bg-pattern-bottom-desktop.svg) right 0px bottom -80px;
 
-.text {
-    width: 380px;
-    height: 200px;
-}
+        background-repeat: no-repeat;
+    }     
 
-.text .text-big {
-    width: 300px;
-    color: hsl(300, 43%, 22%);
-    font-size: 2rem;
-    font-weight: 700;
-}
-
-.text .text-small {
-    padding: 1rem;
-    padding-left: 0;
-    color: hsl(303, 10%, 53%);
-    font-size: 0.7rem;
-    line-height: 1.1rem;
-    font-weight: 500;
-}
-
-.ratings {
-    width: 400px;
-    display: flex;
-    flex-direction: column;
-    margin-right: 2rem;
-}
-
-.rating-card {
-    height: 42px;
-    width: 340px;
-    background-color: hsl(300, 24%, 96%);
-    border-radius: 4px;
-    display: flex;
-    margin-bottom: 1rem;
-}
-
-.nudge-right {
-    position: relative;
-    left: 40px;
-}
-
-.nudge-right-more {
-    position: relative;
-    left: 80px;
-}
-
-.stars {
-    width: 80px;
-    height: 15px;
-    margin: 11px 0 8px 20px;
-}
-
-.stars img {
-    width: 10px;
-    height: 10px;
-    margin-right: 2px;
-}
-
-.rating-text {
-    font-size: 0.62rem;
-    font-weight: bold;
-    color: hsl(300, 43%, 22%);
-    height: 34px;
-    text-align: center;
-    padding-top: 16px;
-    padding-left: 15px;
-}
-
-.lower-half {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 2rem;
-}
-
-.cards {
-    width: 280px;
-    height: 190px;
-    background-color: hsl(300, 43%, 22%);
-    border-radius: 7px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-right: 1.6rem;
-}
-
-.nudge-down {
-    position: relative;
-    top: 20px;
-}
-
-.nudge-down-more {
-    position: relative;
-    top: 40px;
-}
-
-.name-img {
-    display: flex;
-    margin: 30px 0 0 25px;
-}
-
-.pic img {
-    display: block;
-    border-radius: 100px;
-    width: 35px;
-    height: 35px;
-}
-
-.name {
-    color: hsl(300, 24%, 96%);
-    font-weight: bold;
-    font-size: 0.7rem;
-    margin-left: 18px;
-    margin-top: 5px;
-}
-
-.verified-status {
-    margin-top: 0.3rem;
-    font-weight: normal;
-    color: hsl(333, 80%, 67%);
-    font-size: 0.7rem;
-}
-
-.review-text {
-    padding: 1.3rem;
-    padding-top: 0rem;
-    font-size: 0.65rem;
-    color: hsl(300, 24%, 96%);
-    line-height: 1.1rem;
-    font-weight: 500;
-    padding-bottom: 2rem;
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .upper-half {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .text {
+        width: 380px;
+        height: 200px;
+    }
+    
+    .text .text-big {
+        width: 300px;
+        color: hsl(300, 43%, 22%);
+        font-size: 2rem;
+        font-weight: 700;
+    }
+    
+    .text .text-small {
+        padding: 1rem;
+        padding-left: 0;
+        color: hsl(303, 10%, 53%);
+        font-size: 0.7rem;
+        line-height: 1.1rem;
+        font-weight: 500;
+    }
+    
+    .ratings {
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        margin-right: 2rem;
+    }
+    
+    .rating-card {
+        height: 42px;
+        width: 340px;
+        background-color: hsl(300, 24%, 96%);
+        border-radius: 4px;
+        display: flex;
+        margin-bottom: 1rem;
+    }
+    
+    .nudge-right {
+        position: relative;
+        left: 40px;
+    }
+    
+    .nudge-right-more {
+        position: relative;
+        left: 80px;
+    }
+    
+    .stars {
+        width: 80px;
+        height: 15px;
+        margin: 11px 0 8px 20px;
+    }
+    
+    .stars img {
+        width: 10px;
+        height: 10px;
+        margin-right: 2px;
+    }
+    
+    .rating-text {
+        font-size: 0.62rem;
+        font-weight: bold;
+        color: hsl(300, 43%, 22%);
+        height: 34px;
+        text-align: center;
+        padding-top: 16px;
+        padding-left: 15px;
+    }
+    
+    .lower-half {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2rem;
+    }
+    
+    .cards {
+        width: 280px;
+        height: 190px;
+        background-color: hsl(300, 43%, 22%);
+        border-radius: 7px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-right: 1.6rem;
+    }
+    
+    .nudge-down {
+        position: relative;
+        top: 20px;
+    }
+    
+    .nudge-down-more {
+        position: relative;
+        top: 40px;
+    }
+    
+    .name-img {
+        display: flex;
+        margin: 30px 0 0 25px;
+    }
+    
+    .pic img {
+        display: block;
+        border-radius: 100px;
+        width: 35px;
+        height: 35px;
+    }
+    
+    .name {
+        color: hsl(300, 24%, 96%);
+        font-weight: bold;
+        font-size: 0.7rem;
+        margin-left: 18px;
+        margin-top: 5px;
+    }
+    
+    .verified-status {
+        margin-top: 0.3rem;
+        font-weight: normal;
+        color: hsl(333, 80%, 67%);
+        font-size: 0.7rem;
+    }
+    
+    .review-text {
+        padding: 1.3rem;
+        padding-top: 0rem;
+        font-size: 0.65rem;
+        color: hsl(300, 24%, 96%);
+        line-height: 1.1rem;
+        font-weight: 500;
+        padding-bottom: 2rem;
+    } 
 }
